@@ -397,3 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 MSBuild_Logs/
+src/ValidateMessageBenchmarks
