@@ -5,6 +5,10 @@ using System.Security.Cryptography;
 namespace HashBenchmarks;
 
 [LongRunJob] //ShortRunJob, DryJob, MediumRunJob, LongRunJob, VeryLongRunJob
+//[SimpleJob(runtimeMoniker: RuntimeMoniker.Net70)]
+//[SimpleJob(runtimeMoniker: RuntimeMoniker.Net472)] : Target as many platforms as you want
+[GcServer(true)] //Runs Server Garbage Collector, default behavior is false
+//[LegacyJitX64Job, RyuJitX64Job] //use the jit compiler you prefer
 [AllStatisticsColumn] //Other Columns: Min, Max, Mean, Median, StdDev, Op/s, Skewness, Kurtosis, Percentiles
 [MemoryDiagnoser] //Other Diagnosers: ThreadingDiagnoser, ExceptionDiagnoser, HardwareCounters, TailCallDiagnoser, ETWProfiler
 [MarkdownExporterAttribute.GitHub] //Other Exporters: AsciiDocExporter, CsvExporter, HtmlExporter, RPlotExporter, PlainExporter, JsonExporter, XmlExporter
