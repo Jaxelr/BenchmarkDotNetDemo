@@ -1,4 +1,7 @@
 ﻿using BenchmarkDotNet.Running;
 using StringBenchmarks;
 
-_ = BenchmarkRunner.Run<StringVsStringBuilderReplace>();
+_ = BenchmarkSwitcher.FromAssembly(typeof(StringVsStringBuilderReplace).Assembly)
+    .Run(args);
+//_ = BenchmarkRunner.Run<StringVsStringBuilderReplace>();
+//_ = BenchmarkRunner.Run<StringVsStringBuilderConcatenation>();

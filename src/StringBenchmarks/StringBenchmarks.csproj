@@ -1,3 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+  <ItemGroup>
+    <Compile Remove="BenchmarkDotNet.Artifacts\**" />
+    <Compile Remove="MSBuild_Logs\**" />
+    <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
+    <EmbeddedResource Remove="MSBuild_Logs\**" />
+    <None Remove="BenchmarkDotNet.Artifacts\**" />
+    <None Remove="MSBuild_Logs\**" />
+  </ItemGroup>
 </Project>

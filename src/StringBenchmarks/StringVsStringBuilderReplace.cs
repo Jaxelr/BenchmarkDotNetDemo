@@ -9,6 +9,7 @@ namespace StringBenchmarks;
 [AllStatisticsColumn]
 [MemoryDiagnoser]
 [Orderer(SummaryOrderPolicy.FastestToSlowest)]
+[BenchmarkCategory("Replace")]
 public class StringVsStringBuilderReplace
 {
     [Benchmark]
