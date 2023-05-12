@@ -1,14 +1,9 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Order;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace StringBenchmarks;
 
-[LongRunJob]
-[AllStatisticsColumn]
-[MemoryDiagnoser]
-[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 [BenchmarkCategory("Replace")]
 public class StringVsStringBuilderReplace
 {
@@ -35,6 +30,5 @@ public class StringVsStringBuilderReplace
         yield return new object[] { new string(input, 500) };
         yield return new object[] { new string(input, 50_000) };
         yield return new object[] { new string(input, 200_000) };
-        yield return new object[] { new string(input, 1_000_000) };
     }
 }

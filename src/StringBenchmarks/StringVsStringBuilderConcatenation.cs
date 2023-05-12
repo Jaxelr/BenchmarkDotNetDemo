@@ -1,17 +1,12 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Order;
 using System.Text;
 
 namespace StringBenchmarks;
 
-[LongRunJob]
-[AllStatisticsColumn]
-[MemoryDiagnoser]
-[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 [BenchmarkCategory("Concatenation")]
 public class StringVsStringBuilderConcatenation
 {
-    [Params(500, 50_000, 200_000, 1_000_000)]
+    [Params(500, 50_000, 200_000)]
     public int N;
 
     private const char input = 'X';
