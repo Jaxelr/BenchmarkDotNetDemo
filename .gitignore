@@ -398,3 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 MSBuild_Logs/
 src/ValidateMessageBenchmarks
+BenchmarkDotNetDemo.Internal.sln
